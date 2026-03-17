@@ -13,3 +13,14 @@ Route::get('/buithanhhuy', function () {
 Route::get('/doanquochuy', function () {
     return 'Đoan Quoc Huy';
 });
+
+use Illuminate\Support\Facades\DB;
+
+// Câu 7.2: Top 10 phim điểm cao nhất
+Route::get('/top-movies', function () {
+    $movies = DB::table('movie')
+                ->orderBy('vote_average', 'desc')
+                ->limit(10)
+                ->get();
+    return view('top_movies', ['movies' => $movies]);
+});
