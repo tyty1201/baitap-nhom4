@@ -10,3 +10,6 @@ Route::get('/kapee2812', function () {
 Route::get('/buithanhhuy', function () {
     return "Bui Thanh Huy";
 });
+Route::get('/doanquochuy', function () {
+    return 'Đoan Quoc Huy';
+});
