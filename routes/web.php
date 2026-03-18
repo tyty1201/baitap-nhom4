@@ -1,6 +1,10 @@
 <?php
-use Illuminate\Support\Facades\Route; 
 
-Route::get('/tanhien', function () {
-    return 'Nguyễn Tấn Hiển';
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GenreController;
+
+// route của bạn
+Route::get('/genres', [GenreController::class, 'index']);
+Route::get('/baotran123', function () {
+    return "Nguyen Ngoc Bao Tran";
 });
