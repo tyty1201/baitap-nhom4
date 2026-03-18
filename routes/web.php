@@ -15,6 +15,9 @@ Route::get('/genres', [GenreController::class, 'index']);
 
 Route::get('/TanHien', function () {
     return "NguyenTanHien";
+Route::get('/kapee2812', function () {
+    return "Dang Thi Kim Phuong";
+
 });
 
 //Route của moviedb
@@ -43,6 +46,7 @@ Route::get('/', function () {
 
 // Route của Bùi Thành Huy
 Route::get('/buithanhhuy', function () {
+
     return 'Bùi Thành Huy';
 });
 
@@ -51,4 +55,20 @@ Route::get('/action-movies', [MovieController::class, 'actionMovies'])->name('ac
 
 // Nếu anh muốn dùng tên route khác, ví dụ: /phim-hanh-dong
 // Route::get('/phim-hanh-dong', [MovieController::class, 'actionMovies'])->name('action.movies');
+
+    return "Bui Thanh Huy";
+});
+
+use Illuminate\Support\Facades\DB;
+
+Route::get('/canada-movie', function () {
+
+    // B1: Lấy dữ liệu từ database
+    $movies = DB::table('movie')
+        ->where('country_name', 'Canada')
+        ->get();
+
+    // B2: Trả về view
+    return view('canada_movie', compact('movies'));
+});
 
