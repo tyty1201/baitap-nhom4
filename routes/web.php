@@ -9,3 +9,12 @@ Route::get('/quynhthi', function () {
 });
 
 Route::get('/top-budget-movies', [MovieController::class, 'getTopBudget']);
+
+use App\Http\Controllers\GenreController;
+
+// route của bạn
+Route::get('/genres', [GenreController::class, 'index']);
+Route::get('/baotran123', function () {
+    return "Nguyen Ngoc Bao Tran";
+});
+
