@@ -12,3 +12,5 @@ Route::get('/top-budget-movies', [MovieController::class, 'getTopBudget']);
 
 // Code từ main
 Route::get('/genres', [GenreController::class, 'index']);
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
