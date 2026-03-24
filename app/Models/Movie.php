@@ -1,8 +1,7 @@
 <?php
 
 namespace App\Models;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
->>>>>>> origin/thanhhuy
+
 use Illuminate\Database\Eloquent\Model;
 
 class Movie extends Model
@@ -13,5 +12,3 @@ class Movie extends Model
     // Tắt timestamps nếu bảng của bạn không có cột created_at và updated_at
     public $timestamps = false;
 }
-    use HasFactory;
-
